@@ -17,31 +17,31 @@ public class UserController {
     private UserRepository repository;
 
     @GetMapping("/")
-    public List<User> getUsers() {
-        List<User> users = (List<User>)repository.findAll();
-        return users;
+    public List<Admin> getUsers() {
+        List<Admin> admins = (List<Admin>)repository.findAll();
+        return admins;
     }
 
     @GetMapping("/add/{username}/{password}")
-    public String addUser(@PathVariable String username, @PathVariable String password) {
-        repository.save(new User(username, password));
+    public String add(@PathVariable String username, @PathVariable String password) {
+        repository.save(new Admin(username, password));
         return "ok";
     }
 
     @GetMapping("/get/{username}")
-    public List<User> getUser(@PathVariable String username) {
-        List<User> users = repository.findByUsername(username);
-        return users;
+    public List<Admin> get(@PathVariable String username) {
+        List<Admin> admins = repository.findByUsername(username);
+        return admins;
     }
 
     @GetMapping("/delete/{id}")
-    public Iterable<User> deleteUser(@PathVariable long id) {
+    public Iterable<Admin> delete(@PathVariable long id) {
         repository.delete(id);
         return repository.findAll();
     }
 
     @GetMapping("/delete")
-    public Iterable<User> deleteAll() {
+    public Iterable<Admin> deleteAll() {
         repository.deleteAll();
         return repository.findAll();
     }

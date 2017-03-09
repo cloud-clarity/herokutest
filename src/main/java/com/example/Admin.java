@@ -3,8 +3,7 @@ package com.example;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
-public class User {
+public class Admin {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -12,9 +11,9 @@ public class User {
     private String username;
     private String password;
 
-    public User() {};
+    public Admin() {};
 
-    public User(String username, String password) {
+    public Admin(String username, String password) {
         this.username = username;
         this.password = password;
     }

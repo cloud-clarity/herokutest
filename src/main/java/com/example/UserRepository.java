@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface UserRepository extends CrudRepository<User, Long> {
-    List<User> findByUsername(String lastName);
+public interface UserRepository extends CrudRepository<Admin, Long> {
+    List<Admin> findByUsername(String lastName);
 }
