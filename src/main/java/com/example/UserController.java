@@ -25,7 +25,7 @@ public class UserController {
     @GetMapping("/add/{username}/{password}")
     public User addUser(@PathVariable String username, @PathVariable String password) {
         User user = repository.save(new User(username, password));
-        return repository.findOne(user.getId());
+        return user;
     }
 
     @GetMapping("/get/{username}")
