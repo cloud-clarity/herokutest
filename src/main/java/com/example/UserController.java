@@ -17,6 +17,11 @@ public class UserController {
     private UserRepository repository;
 
     @GetMapping("/")
+    public String hello() {
+        return "App is running!";
+    }
+
+    @GetMapping("/admins")
     public List<Admin> getUsers() {
         List<Admin> admins = (List<Admin>)repository.findAll();
         return admins;
