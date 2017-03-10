@@ -40,7 +40,7 @@ public class UserController {
         return repository.findAll();
     }
 
-    @GetMapping("/delete")
+    @GetMapping("/deleteAll")
     public Iterable<Admin> deleteAll() {
         repository.deleteAll();
         return repository.findAll();
