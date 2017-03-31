@@ -9,16 +9,16 @@ import java.util.List;
 
 
 @RestController
-public class UserController {
+public class AdminController {
 
     //   CREATE TABLE Users(id SERIAL, username VARCHAR(255), password VARCHAR(255))
 
     @Autowired
-    private UserRepository repository;
+    private AdminRepository repository;
 
     @GetMapping("/")
     public String hello() {
-        return "App is running!";
+        return "App is running! test";
     }
 
     @GetMapping("/admins")
