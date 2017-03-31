@@ -18,7 +18,7 @@ public class AdminController {
 
     @GetMapping("/")
     public String hello() {
-        return "App is running!";
+        return "App is running! TEST";
     }
 
     @GetMapping("/admins")
